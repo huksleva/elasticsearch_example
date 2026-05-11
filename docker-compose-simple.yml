@@ -22,7 +22,7 @@ services:
       - SPRING_ELASTICSEARCH_URIS=http://elasticsearch:9200
 
   db:
-    image: postgres:16.0-simple
+    image: postgres:16.0
     container_name: postgres_db-simple
 
     environment:
@@ -34,7 +34,7 @@ services:
       - "5432:5432"
 
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:8.13.4-simple
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.13.4
     container_name: elasticsearch-simple
 
     environment:

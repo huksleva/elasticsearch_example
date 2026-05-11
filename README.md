@@ -26,7 +26,7 @@ mvn clean compile jib:dockerBuild
 ### Шаг 2: Запуск контейнеров с помощью Docker Compose
 Для запуска всех контейнеров, используйте следующую команду:
 ```bash
-docker-compose up
+docker compose -f docker-compose-simple.yml up
 ```
 
 ### Шаг 3: Индексация документов (для поиска с elasticsearch)
