@@ -1,7 +1,7 @@
 services:
   app:
-    image: moviesearch
-    container_name: moviesearch
+    image: moviesearch-simple
+    container_name: moviesearch-simple
     build:
       context: .
       dockerfile: Dockerfile
@@ -22,8 +22,8 @@ services:
       - SPRING_ELASTICSEARCH_URIS=http://elasticsearch:9200
 
   db:
-    image: postgres:16.0
-    container_name: postgres_db
+    image: postgres:16.0-simple
+    container_name: postgres_db-simple
 
     environment:
       POSTGRES_DB: movies
@@ -34,8 +34,8 @@ services:
       - "5432:5432"
 
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:8.13.4
-    container_name: elasticsearch
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.13.4-simple
+    container_name: elasticsearch-simple
 
     environment:
       - discovery.type=single-node
